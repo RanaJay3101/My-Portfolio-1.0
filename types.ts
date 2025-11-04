@@ -1,4 +1,3 @@
-
 export interface Skill {
   name: string;
   icon?: React.ReactNode;
@@ -15,7 +14,7 @@ export interface ExperienceItem {
   companyUrl?: string;
   date: string;
   location: string;
-  description: string[];
+  description: (string | React.ReactNode)[];
   tech: string[];
 }
 
@@ -33,4 +32,18 @@ export interface EducationItem {
     date: string;
     location: string;
     details: string[];
+}
+
+export interface AchievementItem {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  url?: string;
+}
+
+export interface CodingStat {
+  platform: string;
+  stats: { label: string; value: string }[];
+  url: string;
+  icon: React.ReactNode;
 }
